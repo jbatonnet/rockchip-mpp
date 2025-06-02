@@ -829,6 +829,17 @@ static const MppSocInfo mpp_soc_infos[] = {
         {   &vepu2, NULL, NULL, NULL, },
     },
     {   /*
+         * rv1106 has codec:
+         * 1 - vpu2 for jpeg encoder and decoder
+         * 2 - RK H.264/H.265 4K encoder
+         */
+        "rv1106",
+        ROCKCHIP_SOC_RV1106,
+        HAVE_VDPU2 | HAVE_VEPU2 | HAVE_RKVENC,
+        {   &vdpu2_jpeg, &vdpu341_h264, NULL, NULL, NULL, NULL, },
+        {   &vepu2_jpeg, &vepu540p, NULL, NULL, },
+    },
+    {   /*
          * rv1108 has codec:
          * 1 - vpu2 for jpeg encoder and decoder
          * 2 - RK H.264 4K decoder

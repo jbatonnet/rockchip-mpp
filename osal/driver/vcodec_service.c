@@ -307,6 +307,18 @@ const char *mpp_get_vcodec_dev_name(MppCtxType type, MppCodingType coding)
                 dev = mpp_find_device(mpp_vpu_dev);
         }
     } break;
+    case ROCKCHIP_SOC_RV1106 : {
+        /*
+         * rv1106 has codec:
+         * 1 - vpu2
+         * 2 - RK H.264/H.265 4K encoder
+         */
+        if (coding == MPP_VIDEO_CodingAVC) {
+            if (type == MPP_CTX_ENC)
+                dev = mpp_find_device(mpp_rkvenc_dev);
+        } else if (coding == MPP_VIDEO_CodingMJPEG)
+            dev = mpp_find_device(mpp_vpu_dev);
+    } break;
     case ROCKCHIP_SOC_RV1108 : {
         /*
          * rv1108 has codec:
