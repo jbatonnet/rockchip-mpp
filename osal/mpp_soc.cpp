@@ -1108,6 +1108,8 @@ MppSocService::MppSocService()
       dec_coding_cap(0),
       enc_coding_cap(0)
 {
+    mpp_debug = MPP_DBG_TIMING | MPP_DBG_PTS | MPP_DBG_INFO | MPP_DBG_PLATFORM;
+
     RK_U32 i;
     RK_U32 vcodec_type = 0;
 
