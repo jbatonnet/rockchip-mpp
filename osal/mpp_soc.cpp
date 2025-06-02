@@ -835,7 +835,7 @@ static const MppSocInfo mpp_soc_infos[] = {
          */
         "rv1106",
         ROCKCHIP_SOC_RV1106,
-        HAVE_VDPU2 | HAVE_VEPU2 | HAVE_RKVENC,
+        HAVE_VDPU2 | HAVE_VEPU2 | HAVE_RKVENC | HAVE_RKVDEC,
         {   &vdpu2_jpeg, &vdpu341_h264, NULL, NULL, NULL, NULL, },
         {   &vepu2_jpeg, &vepu540p, NULL, NULL, },
     },
